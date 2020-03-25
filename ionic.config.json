@@ -1,0 +1,7 @@
+{
+  "name": "AskMe",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
