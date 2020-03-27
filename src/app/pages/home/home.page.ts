@@ -13,7 +13,7 @@ export class HomePage {
   };
   constructor(private googlePlus: GooglePlus) {}
 
-  login() {
+  loginWithGoogle() {
     this.googlePlus.login({}).then(res => {
 
       console.log(res);
