@@ -1,0 +1,49 @@
+.letters{
+    text-align: center;
+    .letter{
+        border-bottom: 2px solid #000;
+        margin: 0 4px;
+        width: 20px;
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+        color: transparent;
+    }
+    .letter.visible{
+        color: #000;
+    }
+}
+.tip{
+    padding-left:15px;
+    span{
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+}
+.opacity{
+    opacity: .5;
+}
+.part-alphabet{
+    text-align: center;
+    ion-button{
+        font-size: 9px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+@media(min-width: 374px){
+    .part-alphabet{
+        text-align: center;
+        ion-button{
+            font-size: 12px;
+        }
+    }
+}
+@media(min-width: 620px){
+    .part-alphabet{
+        text-align: center;
+        ion-button{
+            font-size: 14px;
+        }
+    }
+}

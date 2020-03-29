@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Guess.Io</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [hidden]="gameOver">
+    <div class="life">
+      <ion-icon *ngFor="let item of [1,2,3,4,5]" class="heart" name="heart"></ion-icon>
+    </div>
+    <br>
+    <br>
+    <br>
+    <p [hidden]="!tip" class="tip">Dica: <span>{{ tip }}</span></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="letters">
+      <span *ngFor="let letter of selectedWord" [ngClass]="{'visible': isDash(letter)}" attr.data-letter="{{letter}}" class="letter">{{ letter }}</span>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="alphabet">
+      <div *ngFor="let keyboardPart of keyboard" class="part-alphabet">
+        <ion-button *ngFor="let letter of keyboardPart.letters" (click)="verifyLetter(letter)" attr.data-letter="{{letter}}" class="alphabet-letter">{{ letter }}</ion-button>
+      </div>
+    </div>
+  </div>
+  <div [hidden]="!gameOver">
+    <p>Fim do jogo</p>
+    <ion-button (click)="tryAgain()" size="large">Tentar outra vez</ion-button>
+  </div>
+  
+</ion-content>
