@@ -7,21 +7,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide>
-      <h1>Slide 1</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 2</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 3</h1>
-    </ion-slide>
-  </ion-slides>
   <div id="container">
     <ion-button color="success" ><a [routerLink]="[ '/login']">Login</a></ion-button>
 
     <ion-button color="primary" (click)="loginWithGoogle()">Login Com Google</ion-button>
     <ion-button color="secondary" (click)="logout()">logout</ion-button>
+    <br>
+    <br>
+    <br>
+    <ion-button color="secondary" (click)="game()">Jogar</ion-button>
+
   </div>
 </ion-content>

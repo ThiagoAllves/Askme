@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomePage {
     initialSlide: 1,
     speed: 400
   };
-  constructor(private googlePlus: GooglePlus) {}
+  constructor(private googlePlus: GooglePlus, private router: Router) {}
 
   loginWithGoogle() {
     this.googlePlus.login({}).then(res => {
@@ -21,5 +22,8 @@ export class HomePage {
   }
   logout() {
     this.googlePlus.logout();
+  }
+  game() {
+    this.router.navigateByUrl('game');
   }
 }
